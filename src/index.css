@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Prevent flash of unstyled content and bottom-up loading */
+html {
+  visibility: visible;
+  opacity: 1;
+}
+
+body {
+  visibility: visible;
+  opacity: 1;
+}
+
+#root {
+  min-height: 100vh;
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Smooth page transitions */
+.page-transition {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Prevent layout shift */
+* {
+  box-sizing: border-box;
+}
+
+/* Ensure proper loading */
+.loading-prevent {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
