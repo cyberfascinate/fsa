@@ -98,11 +98,10 @@ const Home = () => {
       <section className="relative bg-gradient-to-br from-blue-50 via-yellow-50 to-red-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-16 md:py-20 lg:py-28 transition-colors duration-300 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 dark:text-white mb-6 transition-colors leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center text-gray-900 dark:text-white mb-6 leading-tight px-4">
               <span className="block mb-2">Empowering Growth with</span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#004aad] to-[#ad0000] block">
-                Integrity<span className="hidden xs:inline sm:inline"> </span><br className="block xs:hidden sm:hidden" />
-                and Excellence
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#004aad] to-[#ad0000] text-2xl sm:text-3xl md:text-4xl">
+                Integrity<br className="sm:hidden" /> and Excellence
               </span>
             </h1>
             <div className="max-w-5xl mx-auto">
