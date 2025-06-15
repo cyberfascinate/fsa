@@ -88,14 +88,33 @@ const AITools = () => {
   ];
 
   const handleButtonClick = (tool: any) => {
-    if (tool.buttonType === 'visit' && tool.visitUrl) {
-      window.open(tool.visitUrl, '_blank');
-    } else if (tool.buttonType === 'access' && tool.accessUrl) {
-      window.open(tool.accessUrl, '_blank');
-    } else if (tool.buttonType === 'schematic' && tool.schematicImage) {
-      window.open(tool.schematicImage, '_blank');
+    const { buttonType, visitUrl, accessUrl, schematicImage } = tool;
+
+    switch (buttonType) {
+      case 'visit':
+        if (visitUrl) window.open(visitUrl, '_blank');
+      break;
+      case 'access':
+        if (accessUrl) window.open(accessUrl, '_blank');
+      break;
+      case 'schematic':
+        if (schematicImage) window.open(schematicImage, '_blank');
+      break;
+      default:
+        console.warn('Unknown button type');
     }
   };
+
+
+  // const handleButtonClick = (tool: any) => {
+  //   if (tool.buttonType === 'visit' && tool.visitUrl) {
+  //     window.open(tool.visitUrl, '_blank');
+  //   } else if (tool.buttonType === 'access' && tool.accessUrl) {
+  //     window.open(tool.accessUrl, '_blank');
+  //   } else if (tool.buttonType === 'schematic' && tool.schematicImage) {
+  //     window.open(tool.schematicImage, '_blank');
+  //   }
+  // };
 
   return (
     <div>
