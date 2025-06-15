@@ -32,7 +32,7 @@ const AITools = () => {
       icon: <FileSearch className="h-8 w-8" />,
       color: 'from-[#c4a668] to-[#a08c4f]',
       status: 'Coming Soon',
-      schematicImage: '/public/images/ai/mitraai/MITRA_D5-6.png',
+      schematicImage: '/images/ai/mitraai/MITRA_D5-6.png',
       buttonType: 'schematic'
     },
     {
@@ -48,7 +48,7 @@ const AITools = () => {
       icon: <Database className="h-8 w-8" />,
       color: 'from-[#ad0000] to-[#8a0000]',
       status: 'Coming Soon',
-      schematicImage: '/public/images/ai/mitraai/WorkflowAudit-Vouching_D5-6.png',
+      schematicImage: '/images/ai/mitraai/WorkflowAudit-Vouching_D5-6.png',
       buttonType: 'schematic'
     },
     {
