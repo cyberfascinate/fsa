@@ -101,7 +101,7 @@ const Home = () => {
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center text-gray-900 dark:text-white mb-6 leading-tight px-4">
               <span className="block mb-2">Empowering Growth with</span>
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#004aad] to-[#ad0000] text-2xl sm:text-3xl md:text-4xl">
-                Integrity<br className="sm:hidden" /> and Excellence
+                Ethics <br className="sm:hidden" /> and Excellence
               </span>
             </h1>
             <div className="max-w-5xl mx-auto">
