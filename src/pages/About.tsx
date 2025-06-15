@@ -30,28 +30,28 @@ const About = () => {
       name: "CA Faith Goyal",
       role: "Founder & Managing Director",
       qualifications: "ACA | B.Tech (ECE)",
-      image: "/public/images/team/Faith_Goyal.png",
+      image: "/images/team/Faith_Goyal.png",
       bgColor: "bg-gradient-to-br from-purple-500 via-pink-500 to-red-500",
     },
     {
       name: "Dr. N. K. Goyal",
       role: "Business & Strategy Expert",
       qualifications: "M.B.B.S., M.D",
-      image: "/public/images/team/NK_Goyal.png",
+      image: "/images/team/NK_Goyal.png",
       bgColor: "bg-gradient-to-br from-red-600 to-red-800",
     },
     {
       name: "CA Vinay Goyal",
       role: "Auditing & Compliance Expert",
       qualifications: "ACA | B.Com",
-      image: "/public/images/team/Vinay_Goyal.png",
+      image: "/images/team/Vinay_Goyal.png",
       bgColor: "bg-gradient-to-br from-blue-600 to-blue-800",
     },
     {
       name: "Lokesh Choraria",
       role: "AI & Automation Expert",
       qualifications: "B.Tech (ECE)",
-      image: "/public/images/team/Lokesh_choraria.png",
+      image: "/images/team/Lokesh_choraria.png",
       bgColor: "bg-gradient-to-br from-yellow-500 to-orange-500",
     }
   ];
