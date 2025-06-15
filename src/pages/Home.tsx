@@ -60,55 +60,56 @@ const Home = () => {
       status: 'Live'
     },
     {
-      name: 'CA.Chatbot',
-      description: 'RAG-powered chatbot for legal & tax advisory',
-      status: 'Beta'
+      name: 'MITRA.AI',
+      description: 'Merging ITR documentation and Automation using AI for seamless file management.',
+      status: 'Coming Soon'
     },
     {
-      name: 'AI Audit Engine',
-      description: 'Automated ledger review and fraud detection',
-      status: 'Coming Soon'
+      name: 'Prompt Library',
+      description: 'Custom prompt library drafted by our experts for your use cases relating to legal, accounting, taxation, compliance and advisory fields.',
+      status: 'Live'
     }
   ];
 
-  const blogPosts = [
-    {
-      title: 'How AI is Revolutionizing Tax Compliance for Indian SMEs',
-      category: 'AI & Technology',
-      readTime: '8 min read',
-      date: '2025-01-15'
-    },
-    {
-      title: 'Top 5 Legal Mistakes Every Startup Should Avoid',
-      category: 'Legal Insights',
-      readTime: '6 min read',
-      date: '2025-01-12'
-    },
-    {
-      title: 'Virtual CFO Services: The Future of SME Financial Management',
-      category: 'Finance',
-      readTime: '7 min read',
-      date: '2025-01-10'
-    }
-  ];
+  // const blogPosts = [
+  //   {
+  //     title: 'How AI is Revolutionizing Tax Compliance for Indian SMEs',
+  //     category: 'AI & Technology',
+  //     readTime: '8 min read',
+  //     date: '2025-01-15'
+  //   },
+  //   {
+  //     title: 'Top 5 Legal Mistakes Every Startup Should Avoid',
+  //     category: 'Legal Insights',
+  //     readTime: '6 min read',
+  //     date: '2025-01-12'
+  //   },
+  //   {
+  //     title: 'Virtual CFO Services: The Future of SME Financial Management',
+  //     category: 'Finance',
+  //     readTime: '7 min read',
+  //     date: '2025-01-10'
+  //   }
+  // ];
 
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-50 via-yellow-50 to-red-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-16 md:py-24 lg:py-32 transition-colors duration-300">
+      <section className="relative bg-gradient-to-br from-blue-50 via-yellow-50 to-red-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-16 md:py-20 lg:py-28 transition-colors duration-300 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6 transition-colors leading-tight">
-              Empowering Growth with
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#004aad] to-[#ad0000] block mt-2">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 dark:text-white mb-6 transition-colors leading-tight">
+              <span className="block mb-2">Empowering Growth with</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#004aad] to-[#ad0000] block">
                 Integrity and Excellence
               </span>
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed transition-colors px-4">
-              Felicity Strategic Advisors is your strategic partner for tax, legal, financial, and digital transformation. 
-              We help Indian businesses scale with expert-backed, AI-powered solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
+            <div className="max-w-5xl mx-auto">
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed transition-colors px-2">
+                  Felicity Strategic Advisors combines expert knowledge and AI-powered innovation to deliver taxation, legal, compliance & regulatory, financial management and digital transformation services that accelerate the growth of Indian businesses.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center px-4 max-w-md sm:max-w-none mx-auto">
               <Link
                 to="/services"
                 className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-[#004aad] to-[#ad0000] text-white font-semibold rounded-lg hover:from-[#003d8a] hover:to-[#8a0000] transition-all transform hover:scale-105 shadow-lg"
@@ -176,15 +177,21 @@ const Home = () => {
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="h-6 w-6 text-green-600 dark:text-green-400" />
-                    <span className="text-gray-700 dark:text-gray-300 transition-colors">Proven track record with 500+ satisfied clients</span>
+                    <span className="text-gray-700 dark:text-gray-300 transition-colors">Proven track record with 100+ satisfied clients</span>
                   </div>
                 </div>
               </div>
               <div className="text-center">
                 <div className="inline-block bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg transition-colors">
                   <div className="text-4xl font-bold text-[#004aad] dark:text-blue-400 mb-2 transition-colors">10x</div>
-                  <div className="text-gray-600 dark:text-gray-400 transition-colors">Revenue Growth</div>
-                  <div className="text-sm text-gray-500 dark:text-gray-500 mt-2">Post-qualification consulting success</div>
+                  <div className="text-gray-600 dark:text-gray-400 transition-colors">Client Revenue Growth</div>
+                  <div className="text-sm text-gray-500 dark:text-gray-500 mt-2">Post onboarding with us</div>
+                </div>
+                
+                <div className="inline-block bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg transition-colors">
+                  <div className="text-4xl font-bold text-[#004aad] dark:text-blue-400 mb-2 transition-colors">100x</div>
+                  <div className="text-gray-600 dark:text-gray-400 transition-colors">Refunds Received</div>
+                  <div className="text-sm text-gray-500 dark:text-gray-500 mt-2">Post Shifting to FSAPL.</div>
                 </div>
               </div>
             </div>
@@ -289,7 +296,7 @@ const Home = () => {
       </section>
 
       {/* Blog Teaser */}
-      <section className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
+      {/* <section className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-[#004aad] to-[#ad0000] rounded-full mb-6">
@@ -348,7 +355,7 @@ const Home = () => {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

@@ -41,11 +41,11 @@ const Footer = () => {
                   AI Tools
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/blog" className="text-gray-400 dark:text-gray-500 hover:text-white dark:hover:text-gray-300 transition-colors">
                   Blog
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 
@@ -90,7 +90,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 dark:border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-gray-400 dark:text-gray-500 text-sm">
-            © 2025 Felicity Strategic Advisors. All rights reserved.
+            © 2025 Felicity Strategic Advisors Private Limited. All rights reserved.
           </div>
           <div className="flex items-center space-x-6 mt-4 md:mt-0">
             <a

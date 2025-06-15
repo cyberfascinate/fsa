@@ -25,6 +25,37 @@ const About = () => {
     }
   ];
 
+  const teamMembers = [
+    {
+      name: "CA Faith Goyal",
+      role: "Founder & Managing Director",
+      qualifications: "ACA | B.Tech (ECE)",
+      image: "/public/images/team/Faith_Goyal.png",
+      bgColor: "bg-gradient-to-br from-purple-500 via-pink-500 to-red-500",
+    },
+    {
+      name: "Dr. N. K. Goyal",
+      role: "Business & Strategy Expert",
+      qualifications: "M.B.B.S., M.D",
+      image: "/public/images/team/NK_Goyal.png",
+      bgColor: "bg-gradient-to-br from-red-600 to-red-800",
+    },
+    {
+      name: "CA Vinay Goyal",
+      role: "Auditing & Compliance Expert",
+      qualifications: "ACA | B.Com",
+      image: "/public/images/team/Vinay_Goyal.png",
+      bgColor: "bg-gradient-to-br from-blue-600 to-blue-800",
+    },
+    {
+      name: "Lokesh Choraria",
+      role: "AI & Automation Expert",
+      qualifications: "B.Tech (ECE)",
+      image: "/public/images/team/Lokesh_choraria.png",
+      bgColor: "bg-gradient-to-br from-yellow-500 to-orange-500",
+    }
+  ];
+
   return (
     <div>
       {/* Hero Section */}
@@ -35,7 +66,7 @@ const About = () => {
               About Felicity Strategic Advisors
             </h1>
             <p className="text-xl md:text-2xl opacity-90 max-w-4xl mx-auto">
-              A multidisciplinary consulting firm offering expert-led solutions for taxation, law, finance, and digital transformation.
+              A multidisciplinary business consulting firm providing specialized, expert-driven solutions in the fields of taxation, legal affairs, finance, and digital transformation
             </p>
           </div>
         </div>
@@ -47,21 +78,21 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6 transition-colors">
-                Driving Business Excellence Through Expert Guidance
+                Driving Business Excellence Through Expert Advisory
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-6 transition-colors">
-                At Felicity Strategic Advisors, we combine deep domain expertise with cutting-edge technology to deliver 
-                comprehensive business solutions. Our multidisciplinary approach ensures that every aspect of your business 
-                growth is supported by professional excellence.
+                At Felicity Strategic Advisors, we integrate extensive domain expertise with advanced technological capabilities to provide 
+                comprehensive business solutions. Our multidisciplinary methodology guarantees that every facet of your enterprise's 
+                growth is underpinned by professional rigor and excellence.
               </p>
               <p className="text-lg text-gray-600 dark:text-gray-300 transition-colors">
-                We serve as your trusted business physicians, diagnosing challenges and prescribing effective solutions 
-                that drive sustainable growth and ensure regulatory compliance across all business functions.
+                We act as physicians to your business, meticulously diagnosing challenges and recommending effective strategies 
+                that foster sustainable growth while ensuring full regulatory compliance across all operational dimensions.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-6">
               <div className="text-center bg-blue-50 dark:bg-blue-900/20 rounded-xl p-6 transition-colors">
-                <div className="text-3xl font-bold text-[#004aad] dark:text-blue-400 mb-2 transition-colors">500+</div>
+                <div className="text-3xl font-bold text-[#004aad] dark:text-blue-400 mb-2 transition-colors">100+</div>
                 <div className="text-gray-600 dark:text-gray-400 transition-colors">Clients Served</div>
               </div>
               <div className="text-center bg-yellow-50 dark:bg-yellow-900/20 rounded-xl p-6 transition-colors">
@@ -81,73 +112,71 @@ const About = () => {
         </div>
       </section>
 
-      {/* Founder Section */}
+      {/* Team Section */}
       <section className="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 transition-colors">
-              Meet Our Founder
+              Meet Our Team – Multidisciplinary Experts Under One Roof
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 transition-colors">
-              Visionary leadership driving innovation in business consulting
+              Our diverse team brings together expertise from multiple disciplines to provide comprehensive business solutions
             </p>
           </div>
 
-          <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg overflow-hidden transition-colors">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
-              <div className="lg:col-span-1 bg-gradient-to-br from-[#004aad] to-[#ad0000] p-8 text-white">
-                <div className="text-center">
-                  {/* Professional Photo */}
-                  <div className="w-40 h-40 mx-auto mb-6 rounded-full overflow-hidden border-4 border-white/30 shadow-lg">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {teamMembers.map((member, index) => (
+              <div key={index} className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg overflow-hidden transition-all hover:shadow-xl group">
+                {/* Photo with colored background */}
+                <div className={`${member.bgColor} p-8 text-center relative overflow-hidden`}>
+                  <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-white/30 shadow-lg group-hover:scale-105 transition-transform">
                     <img
-                      src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=400"
-                      alt="CA Faith Goyal - Founder & Managing Director"
+                      src={member.image}
+                      alt={`${member.name} - ${member.role}`}
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h3 className="text-2xl font-bold mb-2">CA Faith Goyal</h3>
-                  <p className="text-blue-100 mb-4">Founder & Managing Director</p>
-                  <div className="space-y-2 text-sm">
-                    <div className="flex items-center justify-center space-x-2">
-                      <GraduationCap className="h-4 w-4" />
-                      <span>ACA | B.Tech ECE | LLB</span>
-                    </div>
+                  <h3 className="text-xl font-bold text-white mb-1">{member.name}</h3>
+                  <p className="text-white/90 text-sm font-medium mb-2">{member.role}</p>
+                  <div className="inline-flex items-center space-x-1 bg-white/20 rounded-full px-3 py-1">
+                    <GraduationCap className="h-3 w-3 text-white" />
+                    <span className="text-white text-xs font-medium">{member.qualifications}</span>
                   </div>
                 </div>
               </div>
-              <div className="lg:col-span-2 p-8">
-                <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 transition-colors">Professional Journey</h4>
-                <div className="space-y-4 text-gray-600 dark:text-gray-300 transition-colors">
-                  <p>
-                    With over 10 years of extensive experience spanning pharmaceuticals, consulting, and technology sectors, 
-                    CA Faith Goyal brings a unique multidisciplinary perspective to business strategy and operations.
-                  </p>
-                  <p>
-                    As the driving force behind Faith Pharmaceuticals Ltd. and a former international inline speed skater, 
-                    Faith combines competitive excellence with business acumen to deliver exceptional results for clients.
-                  </p>
-                  <p>
-                    Under Faith's leadership, our consulting practice has achieved remarkable 10x revenue growth post-qualification, 
-                    establishing Felicity Strategic Advisors as a trusted partner for businesses across India.
-                  </p>
-                </div>
-                <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <div className="text-center p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg transition-colors">
-                    <Award className="h-8 w-8 text-[#004aad] dark:text-blue-400 mx-auto mb-2 transition-colors" />
-                    <div className="font-semibold text-gray-900 dark:text-white transition-colors">ACA Qualified</div>
-                    <div className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Chartered Accountant</div>
-                  </div>
-                  <div className="text-center p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg transition-colors">
-                    <TrendingUp className="h-8 w-8 text-[#c4a668] dark:text-yellow-400 mx-auto mb-2 transition-colors" />
-                    <div className="font-semibold text-gray-900 dark:text-white transition-colors">10x Growth</div>
-                    <div className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Revenue Achievement</div>
-                  </div>
-                  <div className="text-center p-4 bg-red-50 dark:bg-red-900/20 rounded-lg transition-colors">
-                    <Users className="h-8 w-8 text-[#ad0000] dark:text-red-400 mx-auto mb-2 transition-colors" />
-                    <div className="font-semibold text-gray-900 dark:text-white transition-colors">Multi-Industry</div>
-                    <div className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Expertise</div>
-                  </div>
-                </div>
+            ))}
+          </div>
+
+          {/* Team Stats */}
+          <div className="mt-16 bg-white dark:bg-gray-900 rounded-2xl shadow-lg p-8 transition-colors">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 transition-colors">
+                Collective Expertise
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400 transition-colors">
+                Our team's combined experience spans multiple industries and disciplines
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+              <div className="text-center p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg transition-colors">
+                <Award className="h-8 w-8 text-purple-600 dark:text-purple-400 mx-auto mb-2 transition-colors" />
+                <div className="font-semibold text-gray-900 dark:text-white transition-colors">Leadership</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Strategic Vision</div>
+              </div>
+              <div className="text-center p-4 bg-red-50 dark:bg-red-900/20 rounded-lg transition-colors">
+                <TrendingUp className="h-8 w-8 text-red-600 dark:text-red-400 mx-auto mb-2 transition-colors" />
+                <div className="font-semibold text-gray-900 dark:text-white transition-colors">Strategy</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Business Growth</div>
+              </div>
+              <div className="text-center p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg transition-colors">
+                <Users className="h-8 w-8 text-blue-600 dark:text-blue-400 mx-auto mb-2 transition-colors" />
+                <div className="font-semibold text-gray-900 dark:text-white transition-colors">Compliance</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400 transition-colors">Risk Management</div>
+              </div>
+              <div className="text-center p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg transition-colors">
+                <Briefcase className="h-8 w-8 text-yellow-600 dark:text-yellow-400 mx-auto mb-2 transition-colors" />
+                <div className="font-semibold text-gray-900 dark:text-white transition-colors">Innovation</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400 transition-colors">AI & Automation</div>
               </div>
             </div>
           </div>

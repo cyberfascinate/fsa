@@ -12,7 +12,7 @@ const Header = () => {
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
     { name: 'AI Tools', href: '/ai-tools' },
-    { name: 'Blog', href: '/blog' },
+    // { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -24,9 +24,9 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <img 
-              src="/logo.png" 
-              alt="Felicity Strategic Advisors Logo" 
+            <img
+              src="/logo.png"
+              alt="Felicity Strategic Advisors Logo"
               className="h-10 w-auto"
             />
           </Link>

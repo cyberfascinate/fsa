@@ -7,7 +7,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
 import AITools from './pages/AITools';
-import Blog from './pages/Blog';
+// import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services />} />
               <Route path="/ai-tools" element={<AITools />} />
-              <Route path="/blog" element={<Blog />} />
+              {/* <Route path="/blog" element={<Blog />} /> */}
               <Route path="/contact" element={<Contact />} />
               {/* Catch all route for 404 - redirect to home */}
               <Route path="*" element={<Home />} />

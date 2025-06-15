@@ -1,5 +1,5 @@
 import React from 'react';
-import { Bot, FileText, MessageSquare, Search, Eye, ExternalLink, ArrowRight, Zap, Shield, TrendingUp } from 'lucide-react';
+import { Bot, FileText, MessageSquare, Search, Eye, ExternalLink, ArrowRight, Zap, Shield, TrendingUp, FileSearch, Database } from 'lucide-react';
 
 const AITools = () => {
   const tools = [
@@ -15,40 +15,46 @@ const AITools = () => {
       ],
       icon: <FileText className="h-8 w-8" />,
       color: 'from-[#004aad] to-[#003d8a]',
-      status: 'Live'
+      status: 'Live',
+      visitUrl: 'https://likhaifsav1.streamlit.app/',
+      buttonType: 'visit'
     },
     {
-      name: 'CA.Chatbot',
-      category: 'LegalTech',
-      description: 'RAG-powered chatbot that simplifies legal & tax advisory for professionals.',
+      name: 'MITRA.AI',
+      category: 'File Organisation AI Agent',
+      description: 'Merging ITR documentation and Automation using AI for seamless file management.',
       features: [
-        'Built on Indian Tax & Legal Data',
-        'Saves 80% research time',
-        'Natural Language Interaction',
-        'Real-time updates'
+        'Automatically computes required documents from clients for ITR filing',
+        'Event based and timed triggers',
+        'Linked with existing email/ cloud drive setups',
+        'Automatic file re-organisation and renaming'
       ],
-      icon: <MessageSquare className="h-8 w-8" />,
+      icon: <FileSearch className="h-8 w-8" />,
       color: 'from-[#c4a668] to-[#a08c4f]',
-      status: 'Beta'
+      status: 'Coming Soon',
+      schematicImage: '/public/images/ai/mitraai/MITRA_D5-6.png',
+      buttonType: 'schematic'
     },
     {
-      name: 'AI Audit Engine',
-      category: 'Internal Audit',
-      description: 'AI engine for reviewing ledgers, detecting frauds, and scoring anomalies.',
+      name: 'Vouch.AI',
+      category: 'Auditing AI Agent',
+      description: 'Converts invoices into spreadsheet and automatically matches against respective ledgers.',
       features: [
-        'Automated Ledger Review',
-        'Risk Detection Algorithms',
-        'Audit Trail Reports',
-        'Compliance Scoring'
+        'More than 95% accuracy in OCR of invoices',
+        'Event based and timed triggers',
+        'Edit & Review function before vouching process',
+        'Audit speed increased to 500%'
       ],
-      icon: <Search className="h-8 w-8" />,
+      icon: <Database className="h-8 w-8" />,
       color: 'from-[#ad0000] to-[#8a0000]',
-      status: 'Coming Soon'
+      status: 'Coming Soon',
+      schematicImage: '/public/images/ai/mitraai/WorkflowAudit-Vouching_D5-6.png',
+      buttonType: 'schematic'
     },
     {
       name: 'Prompt Library',
-      category: 'Knowledge Management',
-      description: 'Custom prompt libraries for quick legal & CA drafts with AI assistance.',
+      category: 'Knowledge Resource',
+      description: 'Custom prompt library drafted by our experts for your use cases relating to legal, accounting, taxation, compliance and advisory fields.',
       features: [
         'Reusable Templates',
         'Legal Notices, Contracts, Letters',
@@ -57,7 +63,9 @@ const AITools = () => {
       ],
       icon: <Bot className="h-8 w-8" />,
       color: 'from-[#004aad] to-[#ad0000]',
-      status: 'Live'
+      status: 'Live',
+      accessUrl: 'https://drive.google.com/file/d/100vAO1ISmBIc3elu6SN_Ur3-lg-36xUY/view?usp=drive_link',
+      buttonType: 'access'
     }
   ];
 
@@ -78,6 +86,16 @@ const AITools = () => {
       description: 'Grow your practice with tools that scale with your business needs'
     }
   ];
+
+  const handleButtonClick = (tool: any) => {
+    if (tool.buttonType === 'visit' && tool.visitUrl) {
+      window.open(tool.visitUrl, '_blank');
+    } else if (tool.buttonType === 'access' && tool.accessUrl) {
+      window.open(tool.accessUrl, '_blank');
+    } else if (tool.buttonType === 'schematic' && tool.schematicImage) {
+      window.open(tool.schematicImage, '_blank');
+    }
+  };
 
   return (
     <div>
@@ -185,25 +203,30 @@ const AITools = () => {
                     ))}
                   </div>
 
-                  {/* Action Buttons */}
-                  <div className="flex flex-col sm:flex-row gap-3">
+                  {/* Action Button */}
+                  <div className="flex justify-center">
                     <button 
-                      className={`flex-1 inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r ${tool.color} text-white font-medium rounded-lg hover:opacity-90 transition-opacity ${
-                        tool.status === 'Coming Soon' ? 'opacity-50 cursor-not-allowed' : ''
-                      }`}
-                      disabled={tool.status === 'Coming Soon'}
+                      onClick={() => handleButtonClick(tool)}
+                      className={`w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r ${tool.color} text-white font-medium rounded-lg hover:opacity-90 transition-opacity`}
                     >
-                      {tool.status === 'Coming Soon' ? 'Request Access' : 'View Demo'}
-                      <Eye className="ml-2 h-4 w-4" />
-                    </button>
-                    <button 
-                      className={`flex-1 inline-flex items-center justify-center px-4 py-2 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-medium rounded-lg hover:border-gray-400 dark:hover:border-gray-500 transition-colors ${
-                        tool.status === 'Coming Soon' ? 'opacity-50 cursor-not-allowed' : ''
-                      }`}
-                      disabled={tool.status === 'Coming Soon'}
-                    >
-                      {tool.status === 'Coming Soon' ? 'Case Study' : 'Visit Tool'}
-                      <ExternalLink className="ml-2 h-4 w-4" />
+                      {tool.buttonType === 'visit' && (
+                        <>
+                          Visit Tool
+                          <ExternalLink className="ml-2 h-4 w-4" />
+                        </>
+                      )}
+                      {tool.buttonType === 'access' && (
+                        <>
+                          Request Access
+                          <ExternalLink className="ml-2 h-4 w-4" />
+                        </>
+                      )}
+                      {tool.buttonType === 'schematic' && (
+                        <>
+                          See Technical Schematic
+                          <Eye className="ml-2 h-4 w-4" />
+                        </>
+                      )}
                     </button>
                   </div>
                 </div>
